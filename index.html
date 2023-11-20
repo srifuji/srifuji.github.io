@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <script defer src="assets/js/index.js"></script>
+    <script src="assets/js/register.js"></script>
+    <title>App LaundryKeun</title>
+    <meta name="title" content="AplikasiLaundry" />
+    <meta
+      name="description"
+      content="In this form you can store data of any studenr and which edit and delete.. of your data...!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta property="og:title" content="AplikasiLaundry" />
+    <meta
+      property="og:description"
+      content="In this form you can store data of any studenr and which edit and delete.. of your data...!"
+    />
+    <meta
+      property="og:image"
+      content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+    />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta property="twitter:title" content="AplikasiLaundry" />
+    <meta
+      property="twitter:description"
+      content="In this form you can store data of any studenr and which edit and delete.. of your data...!"
+    />
+    <meta
+      property="twitter:image"
+      content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+    />
+  </head>
+
+  <body >
+    <div class="overlay hidden">
+      <button class="btn-close" id="btn-close">X</button>
+    </div>
+    <form class="form">
+      <h1 style="background-color:rgb(237, 255, 71);">LaundryKeun</h1>
+      <p style="background-color:rgb(71, 181, 255);">Toko.SFM</p>
+      <ul class="container">
+        <li>
+          <label for="roll-no">Kode Laundry</label><br />
+          <input
+            type="number"
+            placeholder="kode laundry"
+            id="roll-no"
+            name="roll-no"
+            required
+          />
+        </li>
+        <li>
+          <label for="student-name">Nama Customer</label><br />
+          <input
+            type="text"
+            placeholder="nama customer"
+            id="student-name"
+            name="student-name"
+            required
+          />
+        </li>
+        <li>
+          <label for="subject">Jenis Laundry</label><br />
+          <input
+            type="text"
+            placeholder="jenis laundry"
+            id="subject"
+            name="subject"
+            required
+          />
+        </li>
+        <label for="store">Kategori</label><br />
+        <select name="" id="store">
+          <option value="1">Laundry Kiloan</option>
+          <option value="3">Laundry Sepatu</option>
+          <option value="2">Laundry Ekspres</option>
+        </select>
+        <div class=" pt-6">
+          <label for="berat">Berat:</label><br>
+          <input class="w-40 h-10 box-border border-2 border-slate-500 border-solid rounded-lg" name="berat"
+            type="number" id="berat">
+          <span class="absolute mt-2 ml-1">kg</span>
+        </div>
+        </li>
+        <li>
+          <label for="harga">Harga per kg</label><br />
+          <input
+            type="number"
+            placeholder="harga"
+            id="harga"
+            name="harga"
+            required
+          />
+        </li>
+        <li class="button">
+          <button class="btn" >Submit</button>
+          <button class="submit-btn hide">Submit</button>
+        </li>
+      </ul>
+    </form>
+    <div class="main">
+      <div class="txt-container">
+        <div class="all-txt">
+          
+        </div>
+      </div>
+    </div>
+    <div id="app">
+    <h1>PWA CRUD with Math</h1>
+
+    <!-- Form for CRUD operations -->
+    <form id="crud-form">
+      <label for="operation">Operation:</label>
+      <select id="operation" required>
+        <option value="add">Add</option>
+        <option value="subtract">Subtract</option>
+        <option value="multiply">Multiply</option>
+        <option value="divide">Divide</option>
+      </select>
+
+      <label for="num1">Number 1:</label>
+      <input type="number" id="num1" required>
+
+      <label for="num2">Number 2:</label>
+      <input type="number" id="num2" required>
+
+      <button type="button" onclick="performOperation()">Calculate</button>
+    </form>
+
+    <!-- Display result -->
+    <div id="result"></div>
+
+    <!-- Display data table -->
+    <table id="data-table">
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>Number 1</th>
+          <th>Number 2</th>
+          <th>Result</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="data-body"></tbody>
+    </table>
+  </div>
+  </body>
+</html>
